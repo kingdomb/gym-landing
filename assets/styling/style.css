@@ -1,24 +1,36 @@
-*
-{
+* {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
-body
-{
+
+body {
     font-family: sans-serif;
 }
-.banner
-{
-    height: 100vh;
+
+.banner {
+    height: 100vh; /* Full viewport height */
     position: relative;
+    overflow: hidden; /* Prevent any content from overflowing */
 }
-.slider
-{
+
+.slider {
     width: 93%;
     float: left;
+    height: 100vh; /* Ensure the slider takes full height */
 }
-.carousel-caption
-{
+
+.carousel-inner,
+.carousel-item {
+    height: 100vh; /* Ensure each carousel item takes full viewport height */
+}
+
+.carousel-item img {
+    height: 100%; /* Ensure images cover the full height */
+    object-fit: cover; /* Maintain image aspect ratio while filling the container */
+    width: 100%; /* Make sure images cover the full width */
+}
+
+.carousel-caption {
     max-height: 350px !important;
     max-width: 500px !important;
     text-align: right !important;
@@ -26,37 +38,33 @@ body
     left: auto !important;
     top: 160px !important;
 }
-.carousel-caption h1
-{
-    font-size: 70px;
-}
-.carousel-caption p
-{
-    margin-top: 40px;
-}
-.side-menu
-{
-    height: 100%;
+
+.side-menu {
+    height: 100vh; /* Ensure the side menu takes full viewport height */
     width: 7%;
     float: right;
     background-color: #ff0000;
-    position: relative;
+    position: fixed; /* Fix the side menu on the right side */
+    top: 0; /* Align the side menu to the top */
     z-index: 2;
 }
-.menu-icon
-{
+
+.menu-icon,
+.search-icon {
+    cursor: pointer;
+}
+
+.menu-icon {
     width: 40px;
     margin: 25px;
-    cursor: pointer;
 }
-.search-icon
-{
+
+.search-icon {
     width: 30px;
     margin: 30px;
-    cursor: pointer;
 }
-.side-menu::after
-{
+
+.side-menu::after {
     content: '';
     width: 1px;
     height: 130px;
@@ -65,8 +73,8 @@ body
     top: 200px;
     position: absolute;
 }
-.carousel-indicators
-{
+
+.carousel-indicators {
     left: 85% !important;
     height: 40% !important;
     width: 95px !important;
@@ -74,8 +82,8 @@ body
     display: block !important;
     color: #fff;
 }
-.carousel-indicators li
-{
+
+.carousel-indicators li {
     width: 10px !important;
     height: 10px !important;
     border-radius: 50% !important;
@@ -84,72 +92,57 @@ body
     background: transparent !important;
     border: 2px solid #fff !important;
 }
-.share
-{
+
+.share {
     margin-top: 60px;
     margin-left: 15px;
 }
-.share img
-{
+
+.share img {
     width: 20px;
     margin-right: 12px;
     cursor: pointer;
 }
-.top-bar
-{
+
+.top-bar {
     position: absolute;
     margin: 30px 50px;
     z-index: 2;
 }
-.top-bar img
-{
+
+.top-bar img {
     height: 30px;
     cursor: pointer;
 }
-.top-bar ul
-{
+
+.top-bar ul {
     display: inline-flex;
 }
-.top-bar ul li
-{
+
+.top-bar ul li {
     list-style: none;
     margin: 15px 20px;
 }
-.top-bar ul li a
-{
+
+.top-bar ul li a {
     color: #fff;
     display: block;
     padding-top: 5px;
 }
-.social-icons
-{
+
+.social-icons {
     top: 35%;
     left: 5%;
     position: absolute;
     z-index: 2;
 }
-.social-icons ul li
-{
+
+.social-icons ul li {
     list-style: none;
     margin: 10px 0;
     font-size: 20px;
 }
-.social-icons ul li a
-{
+
+.social-icons ul li a {
     color: #fff !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
