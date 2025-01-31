@@ -5,29 +5,37 @@
 
 body {
     font-family: sans-serif;
+    height: 100%;
 }
 
 .banner {
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     position: relative;
-    overflow: hidden; /* Prevent any content from overflowing */
+    overflow: hidden;
+    /* Ensure content doesn't overflow */
 }
 
 .slider {
-    width: 93%;
+    width: calc(100% - 7%);
+    /* Subtract side menu width */
+    height: 100%;
     float: left;
-    height: 100vh; /* Ensure the slider takes full height */
+    position: relative;
 }
 
-.carousel-inner,
+.carousel-inner {
+    height: 100%;
+}
+
 .carousel-item {
-    height: 100vh; /* Ensure each carousel item takes full viewport height */
+    height: 100%;
 }
 
 .carousel-item img {
-    height: 100%; /* Ensure images cover the full height */
-    object-fit: cover; /* Maintain image aspect ratio while filling the container */
-    width: 100%; /* Make sure images cover the full width */
+    object-fit: cover;
+    /* Ensure image covers the full height */
+    height: 100%;
+    width: 100%;
 }
 
 .carousel-caption {
@@ -39,29 +47,36 @@ body {
     top: 160px !important;
 }
 
-.side-menu {
-    height: 100vh; /* Ensure the side menu takes full viewport height */
-    width: 7%;
-    float: right;
-    background-color: #ff0000;
-    position: fixed; /* Fix the side menu on the right side */
-    top: 0; /* Align the side menu to the top */
-    z-index: 2;
+.carousel-caption h1 {
+    font-size: 70px;
 }
 
-.menu-icon,
-.search-icon {
-    cursor: pointer;
+.carousel-caption p {
+    margin-top: 40px;
+}
+
+.side-menu {
+    height: 100vh;
+    /* Full viewport height */
+    width: 7%;
+    position: absolute;
+    /* Fix side menu */
+    top: 0;
+    right: 0;
+    background-color: #ff0000;
+    z-index: 2;
 }
 
 .menu-icon {
     width: 40px;
     margin: 25px;
+    cursor: pointer;
 }
 
 .search-icon {
     width: 30px;
     margin: 30px;
+    cursor: pointer;
 }
 
 .side-menu::after {
